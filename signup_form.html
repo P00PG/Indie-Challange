@@ -8,10 +8,15 @@
 
 <style>
 
+    @font-face {
+        font-family: "customfont" ;
+        src: url(https://fonts.google.com/specimen/DM+Sans);
+    }
+
     .wrapper {
     margin-left:auto;
     margin-right:auto;
-    width:1500px;
+    width:1400px;
     }
 
 
@@ -19,12 +24,13 @@
         height: 100vh;
         margin: 180px;
         margin-top: 60px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 25px;
+        font-family: "customfont",Arial, Helvetica, sans-serif;
+        font-size: 22px;
         color: black;
         background: linear-gradient(
             to bottom right,
-            rgb(245, 224, 243),
+            rgb(250, 250, 250),
+            rgb(248, 227, 246),
             rgba(255, 255, 255, 0)
 
         );
@@ -37,10 +43,10 @@
     }
 
     .left_body{
-        float: left;
         width: 600px;
         word-wrap: normal;
-        margin-top: 150px;
+        margin-top: 200px;
+        margin-left: 0px;
     }
 
     span{
@@ -48,22 +54,37 @@
     }
 
     .right_body{
-        margin-top: 50px;
+        margin-top: -565px;
         float: right;
-        width: 600px;
-        height: 650px;
+        width: 500px;
+        height: 710px;
         background-color: white;
-        padding: 100px;
+        padding: 60px;
         padding-top: 40px;
+        border-radius: 20px ;
+    }
+
+    h4{
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    
+
+    td{
+        padding: 10px;
     }
 
     input{
         font-size: 20px;
-        width: 100%;
+        width: 90%;
         padding: 20px;
         height: 30px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid lightgrey;
     }
+
 
 
 
@@ -74,10 +95,10 @@
 
     <body>
         <div class="header">
-            <img style="float: left; height: 5.5%;"src="IndieBrew Starter Files\Assets\Logo.svg"/>
+            <img style="float: left; height: 50px;"src="IndieBrew Starter Files\Assets\Logo.svg"/>
             <div class="right_header">
-                <a href="index.html"><img style="padding: 10px;"src="IndieBrew Starter Files\Assets\Back Arrow.svg"/></a>
-                <p style="margin-top: 0px;">Back to Homepage</p>
+                <a href="index.html"><img style="padding: 10px;background-color: white; width: 20px; height: 20px; border-radius: 5px; border: 2px solid lightgrey;"src="IndieBrew Starter Files\Assets\Back Arrow.svg"/></a>
+                <b><p style="margin-top: 8px; margin-left: 20px; ">Back to Homepage</p></b>
             </div>
         </div>
 
@@ -85,29 +106,40 @@
 
         <div class="left_body">
             <h1>Create your personalized feed.</h1>
-            <p>&#127880<span>Over 20 resources.</span>With resources ranging from Reddit to IndieHackers, we've got all your needs covered.</p>
-            <p>&#128478<span>Delivered weekly.</span>Every week at exactly Tuesday 12:00 P.M. EST - expect a value-packed digest right in your email.
-            </p>
-            <p>&#128161<span>Unlimited ideas.</span>With all the ideas you'll be reading about, what's stopping you from creating a sustainable startup?</p>
-
+            <table>
+                <tr>
+                    <td style="vertical-align: text-top;">&#127880</td>
+                    <td><span>Over 20 resources. </span> With resources ranging from Reddit to IndieHackers, we've got all your needs covered.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: text-top;">&#128478</td>
+                    <td><span>Delivered weekly.</span> Every week at exactly Tuesday 12:00 P.M. EST - expect a value-packed digest right in your email.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: text-top;">&#128161</td>
+                    <td><span>Unlimited ideas. </span> With all the ideas you'll be reading about, what's stopping you from creating a sustainable startup?</td>
+                </tr>
+            </table>
+           
         </div>
 
         <div class="right_body">
             <form>
-                <h2>Create your IndieBrew Account</h2>
+                <h3 style="margin-bottom: 40px; font-size: 30px;">Create your IndieBrew Account</h3>
                 <div class="user_inputs">
-                    Email:<br>
-                    <input type="text" id="text" placeholder="john@example.com"><br>
-                    Full Name:<br>
-                    <input type="text" id="text" placeholder="John Doe"><br>
-                    Password:<br>
-                    <input type="text" id="text" placeholder="At least 8 characters"><br>
+                    <h4>Email</h4>
+                    <input style="margin-top: 10px;" type="text" id="text" placeholder="john@example.com"><br>
+                    <h4>Full Name</h4>
+                    <input style="margin-top: 10px;" type="text" id="text" placeholder="John Doe"><br>
+                    <h4>Password</h4>
+                    <input style="margin-top: 10px;" type="text" id="text" placeholder="At least 8 characters"><br>
                 </div>
-                <input style="width: 30px;"type="checkbox" name="checkbox"> 
-                <label for="checkbox"><p>By creating an account on IndieBrew you agree to the <span style="color: rgb(101, 43, 236); text-decoration: underline; text-decoration-color: rgb(101, 43, 236);">Terms & Conditions.</span></p></label>
+                <input style="width: 20px; margin: 0px; margin-top: 5px;"type="checkbox" name="checkbox"> 
+                <label for="checkbox">By creating an account on IndieBrew you agree to the <span style="color: rgb(101, 43, 236); text-decoration: underline; text-decoration-color: rgb(101, 43, 236);">Terms & Conditions.</span></label>
 
                 <div class="submit">
-                    <input style="height: 60px; width: 644px;" type="submit" value="Create an Account">
+                    <input style="height: 70px; width: 98.5%; margin-top: 50px ; background-color:rgb(101, 43, 236) ; color: white;" type="submit" value="Create an Account">
                 </div>
             </form>
 
